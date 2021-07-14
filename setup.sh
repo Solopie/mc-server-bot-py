@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt install python-is-python3
+sudo apt install python-is-python3 -y
 sudo apt install virtualenv -y
-sudo apt install python3-venv
+sudo apt install python3-venv -y
 
 python -m venv venv
 pip install -r ./requirements.txt
