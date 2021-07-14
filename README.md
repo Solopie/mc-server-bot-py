@@ -4,6 +4,14 @@ Bot for discord to turn on minecraft server hosted on AWS EC2
 
 ## Setup
 
+*Note these instruction have only been tested on Ubuntu 20.04, Python 3.8.5)*
+
+**Install python (3) and virtualenv**
+
+sudo apt install python-is-python3
+sudo apt install virtualenv -y
+sudo apt install python3-ven
+
 **Install required dependencies**
 
 ```
@@ -71,7 +79,7 @@ python bot.py
 
 *[boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)* - Interact with AWS EC2 server instance
 
-Developed/Tested with Python 3.8.5
+Developed/Tested with Python 3.8.5 (Ubuntu 20.04)
 
 
 
