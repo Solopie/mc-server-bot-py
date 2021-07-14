@@ -1,5 +1,7 @@
 #!/bin/bash
 
-source /home/solopie/mc-server-bot-py/venv/bin/activate
+bot_path=/home/solopie/mc-server-bot-py
 
-python /home/solopie/mc-sever-bot-py/bot.py
+source $bot_path/venv/bin/activate
+
+python $bot_path/bot.py
