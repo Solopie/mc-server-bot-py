@@ -54,7 +54,6 @@ async def setup(ctx):
 @bot.command(name="start", help="Start the minecraft server. May take a minute for the server to go online")
 @commands.has_role("server")
 async def start(ctx):
-    await ctx.send("Starting the server")
     response, err = ec2_client.start()
 
     if err:
@@ -67,7 +66,6 @@ async def start(ctx):
 @bot.command(name="status", help="Check status of server")
 @commands.has_role("server")
 async def status(ctx):
-    await ctx.send("Fetching the status")
     status, err = ec2_client.status()
 
     if err:
