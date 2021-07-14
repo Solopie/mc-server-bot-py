@@ -13,3 +13,6 @@ pip install -r ./requirements.txt
 # sudo cp ./mc_discord_bot.service /etc/systemd/system/
 # sudo systemctl enable mc_discord_bot.service
 # sudo systemctl start mc_discord_bot.service
+
+cp .env.sample .env
+echo "Setup your .env file now"
