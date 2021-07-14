@@ -6,6 +6,7 @@ sudo apt install python3-venv -y
 sudo apt install python3-pip -y
 
 python -m venv venv
+source ./venv/bin/activate
 pip install -r ./requirements.txt
 
 # As a service
