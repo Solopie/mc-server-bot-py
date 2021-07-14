@@ -54,23 +54,26 @@ async def setup(ctx):
 @bot.command(name="start", help="Start the minecraft server. May take a minute for the server to go online")
 @commands.has_role("server")
 async def start(ctx):
-    response, err = ec2_client.start()
+    work, message, err = await ec2_client.start()
 
     if err:
-        await ctx.send("Command failed. Please contact an admin")
+        # await ctx.send(err)
         raise discord.DiscordException
     else:
-        await ctx.send("Server has successfully started! Please wait a moment for the server to startup.")
+        if work:
+            await ctx.send("Server has started. Please wait a few moments for it to load")
+        else:
+            await ctx.send(message)
 
 
 @bot.command(name="status", help="Check status of server")
 @commands.has_role("server")
 async def status(ctx):
-    status, err = ec2_client.status()
+    status, message, err = await ec2_client.status()
 
     if err:
-        await ctx.send("Command failed. Please contact an admin")
-        # raise discord.DiscordException
+        # await ctx.send(err)
+        raise discord.DiscordException
     else:
         await ctx.send("Status: " + status)
 
