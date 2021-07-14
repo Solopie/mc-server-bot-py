@@ -8,10 +8,19 @@ Bot for discord to turn on minecraft server hosted on AWS EC2
 
 **Install python (3) and virtualenv**
 
+```
 sudo apt install python-is-python3 -y
 sudo apt install virtualenv -y
 sudo apt install python3-venv -y
 sudo apt install python3-pip -y
+```
+
+**Create virtual environment**
+
+```
+python -m venv venv
+source venv/bin/activate
+```
 
 **Install required dependencies**
 
